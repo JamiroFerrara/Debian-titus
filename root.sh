@@ -36,3 +36,9 @@ cp .Xnord /home/$username
 cp -R dotfiles/* /home/$username/.config/
 chown -R $username:$username /home/$username
 
+cd /home/$username
+
+su
+cd /
+sh -c "$(curl -fsLS chezmoi.io/get)"
+chezmoi restore https://github.com/jamiroferrara/dotfiles
