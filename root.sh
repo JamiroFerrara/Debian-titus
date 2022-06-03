@@ -36,7 +36,8 @@ cp .Xnord /home/$username
 cp -R dotfiles/* /home/$username/.config/
 chown -R $username:$username /home/$username
 
-source ./installscript.sh
+source ./installgeneral.sh
 source ./chezmoi.sh
 source ./installbrave.sh
 source ./installnvim.sh
+source ./installnode.sh

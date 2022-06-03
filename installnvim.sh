@@ -5,5 +5,5 @@ wget https://github.com/neovim/neovim/releases/download/v0.7.0/nvim-linux64.tar.
 tar xzvf nvim-linux64.tar.gz
 mv /home/$username/Downloads/nvim-linux64/bin/nvim /usr/bin
 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
