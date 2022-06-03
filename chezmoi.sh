@@ -1,6 +1,12 @@
 #install dotfiles
-sudo apt install curl
+apt install curl
 cd /home/$username/.local
-sudo bash -c "$(curl -fsLS chezmoi.io/get)"
-sudo chezmoi init https://github.com/jamiroferrara/dotfiles
-sudo chezmoi apply --force
+bash -c "$()"
+
+cd /home/$username/.local
+wget chezmoi.io/get
+bash ./get
+rm -f ./get
+
+chezmoi init https://github.com/jamiroferrara/dotfiles
+chezmoi apply --force -v

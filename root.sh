@@ -37,7 +37,7 @@ cp -R dotfiles/* /home/$username/.config/
 chown -R $username:$username /home/$username
 
 source ./installgeneral.sh
-source ./chezmoi.sh
 source ./installbrave.sh
 source ./installnvim.sh
 source ./installnode.sh
+source ./chezmoi.sh
