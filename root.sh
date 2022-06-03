@@ -40,4 +40,6 @@ source ./installgeneral.sh
 source ./installbrave.sh
 source ./installnvim.sh
 source ./installnode.sh
+#source ./installspotify.sh
 source ./chezmoi.sh
+
