@@ -4,7 +4,7 @@
 "$HOME/.config/bspwm/clean" &
 
 #Monitor
-xrandr --output DP-0 --mode 2560x1440 --rate 144.00 --output DVI-D-1 --mode 1920x1080 --rate 60.00
+#xrandr --output Virtual1 --mode 2560x1440 --rate 144.00 --output DVI-D-1 --mode 1920x1080 --rate 60.00
 
 sleep 0.50
 
@@ -12,7 +12,7 @@ sleep 0.50
 bash ~/.config/polybar/launch.sh --colorblocks &
 feh --bg-fill ~/Pictures/Background/bg.jpg &
 
-xwinwrap -g 2560x1080 -d -fs -fdt -ni -b -nf -un -o 1.0 -debug -- mpv -wid WID --loop --no-audio "/home/stiwie/Pictures/Live_Backgrounds/snowfall.mp4"
+#xwinwrap -g 2560x1080 -d -fs -fdt -ni -b -nf -un -o 1.0 -debug -- mpv -wid WID --loop --no-audio "/home/stiwie/Pictures/Live_Backgrounds/snowfall.mp4"
 
 # Make sure sxhkd is always running
 while :; do
@@ -31,8 +31,7 @@ xsetroot -cursor_name left_ptr
 setxkbmap -layout it
 
 #Monitor Config
-bspc monitor DP-0 -d 1 2 3 4 5 6 7 8 9 10
-bspc monitor DVI-D-1 
+bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 
 #Mouse Scroll Wheel
 imwheel -b "4 5"
