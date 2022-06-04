@@ -4,7 +4,6 @@
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
 cp sources.list /etc/apt/sources.list 
 
-
 username=$(id -u -n 1000)
 builddir=$(pwd)
 
@@ -15,7 +14,7 @@ dpkg -i 'Custom Packages/rofi_1.7.0-1_amd64.deb'
 apt update
 
 # Add base packages
-apt install unzip picom bspwm polybar sddm rofi kitty thunar flameshot neofetch sxhkd git lxpolkit lxappearance xorg -y
+apt install unzip picom bspwm polybar sddm rofi kitty thunar flameshot neofetch sxhkd git lxpolkit lxappearance xorg curl -y
 apt install papirus-icon-theme lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls -y
 
 # Download Nordic Theme
@@ -39,10 +38,10 @@ cp .Xnord /home/$username
 cp -R dotfiles/* /home/$username/.config/
 chown -R $username:$username /home/$username
 
-source /home/$username/Debian-titus/installgeneral.sh
-source /home/$username/Debian-titus/installbrave.sh
-source /home/$username/Debian-titus/installnvim.sh
-source /home/$username/Debian-titus/installnode.sh
+source $builddir/installgeneral.sh
+source $builddir/installbrave.sh
+source $builddir/installnvim.sh
+source $builddir/installnode.sh
 #source ./installspotify.sh
-source /home/$username/Debian-titus/chezmoi.sh
+source $builddir/chezmoi.sh
 
