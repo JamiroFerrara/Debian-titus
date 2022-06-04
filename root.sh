@@ -27,6 +27,9 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/FiraCode.z
 unzip FiraCode.zip -d /usr/share/fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/Meslo.zip
 unzip Meslo.zip -d /usr/share/fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Iosevka.zip
+unzip Iosevka.zip -d /usr/share/fonts
+
 fc-cache -vf
 
 cd $builddir
@@ -36,10 +39,10 @@ cp .Xnord /home/$username
 cp -R dotfiles/* /home/$username/.config/
 chown -R $username:$username /home/$username
 
-source ./installgeneral.sh
-source ./installbrave.sh
-source ./installnvim.sh
-source ./installnode.sh
+source /home/$username/Debian-titus/installgeneral.sh
+source /home/$username/Debian-titus/installbrave.sh
+source /home/$username/Debian-titus/installnvim.sh
+source /home/$username/Debian-titus/installnode.sh
 #source ./installspotify.sh
-source ./chezmoi.sh
+source /home/$username/Debian-titus/chezmoi.sh
 
