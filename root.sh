@@ -52,8 +52,8 @@ bash -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plu
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 #source $builddir/installnode.sh
-apt install nodejs
-apt-get install npm
+apt install -y nodejs
+apt-get install -y npm
 
 #STAGE 2
 npm install --location=global yarn
