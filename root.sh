@@ -39,8 +39,29 @@ cp -R dotfiles/* /home/$username/.config/
 chown -R $username:$username /home/$username
 
 source $builddir/installbrave.sh
-source $builddir/installnvim.sh
-source $builddir/installnode.sh
-#source ./installspotify.sh
-source $builddir/chezmoi.sh
 
+#source $builddir/installnvim.sh
+#install nvim
+mkdir /home/stiwie/Downloads
+cd /home/stiwie/Downloads
+wget https://github.com/neovim/neovim/releases/download/v0.7.0/nvim-linux64.tar.gz
+tar xzvf nvim-linux64.tar.gz
+mv /home/stiwie/Downloads/nvim-linux64/bin/nvim /usr/bin
+
+bash -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+#source $builddir/installnode.sh
+apt install nodejs
+apt-get install npm
+
+#STAGE 2
+npm install --location=global yarn
+
+#source ./installspotify.sh
+
+#source $builddir/chezmoi.sh
+cd /home/$username/.local
+wget chezmoi.io/get
+bash ./get
+rm -f ./get

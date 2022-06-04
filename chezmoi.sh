@@ -5,4 +5,3 @@ cd /home/$username/.local
 wget chezmoi.io/get
 bash ./get
 rm -f ./get
-
