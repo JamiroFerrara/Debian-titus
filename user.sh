@@ -3,7 +3,7 @@
 # Appearance pacakges
 
 #Ms-fonts
-sudo apt install ttf-mscorefonts-installer
+sudo apt install -y ttf-mscorefonts-installer
 
 # Layan Cursors
 mkdir -p $HOME/build
