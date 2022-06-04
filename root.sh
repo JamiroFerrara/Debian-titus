@@ -15,7 +15,7 @@ apt update
 
 # Add base packages
 apt install unzip picom ripgrep bspwm polybar sddm rofi kitty thunar flameshot neofetch sxhkd git lxpolkit lxappearance xorg curl -y
-apt install papirus-icon-theme lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls -y
+apt install papirus-icon-theme lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls mpv -y
 
 # Download Nordic Theme
 cd /usr/share/themes/
@@ -57,5 +57,8 @@ apt-get install -y npm
 npm install --location=global yarn
 
 #source ./installspotify.sh
+curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+apt-get update && sudo apt-get install -y spotify-client
 
 #source $builddir/chezmoi.sh
