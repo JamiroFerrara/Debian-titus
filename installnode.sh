@@ -1,5 +1,5 @@
-sudo apt install nodejs
-sudo apt-get install npm
+apt install nodejs
+apt-get install npm
 
 #STAGE 2
-sudo npm install --location=global yarn
+npm install --location=global yarn
