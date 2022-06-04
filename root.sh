@@ -61,7 +61,3 @@ npm install --location=global yarn
 #source ./installspotify.sh
 
 #source $builddir/chezmoi.sh
-cd /home/$username/.local
-wget chezmoi.io/get
-bash ./get
-rm -f ./get

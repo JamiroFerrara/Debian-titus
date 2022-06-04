@@ -11,3 +11,9 @@ cd "$HOME/build"
 git clone https://github.com/vinceliuice/Layan-cursors
 cd Layan-cursors
 sudo ./install.sh
+
+#Chezmoi
+cd /home/$username/.local
+wget chezmoi.io/get
+bash ./get
+rm -f ./get
