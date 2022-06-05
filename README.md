@@ -20,4 +20,8 @@ sudo su
 ### Theme Stuff - User Level
  ```
  ./user.sh
+ sudo reboot
+ ./user2.sh
  ```
+ dotfiles are managed with chezmoi, if user2 does not work correctly run
+ ./chezmoi.sh and reboot once again.

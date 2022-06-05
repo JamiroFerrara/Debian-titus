@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "coc-css": ">=1.3.0",
+    "coc-emmet": ">=1.1.6",
+    "coc-json": ">=1.4.2",
+    "coc-tailwind-intellisense": "https://github.com/rodrigore/coc-tailwind-intellisense",
+    "coc-tsserver": ">=1.10.4"
+  }
+}
