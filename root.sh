@@ -1,12 +1,13 @@
 #!/bin/bash
 
+username=$(id -u -n 1000)
+builddir=$(pwd)
+
 # Change Debian to SID Branch
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
 cp sources.list /etc/apt/sources.list 
-cp ./bashrc /home/$username/
-
-username=$(id -u -n 1000)
-builddir=$(pwd)
+cp sddm.conf /etc/
+cp .bashrc /home/$username/
 
 # Add Custom Titus Rofi Deb Package
 dpkg -i 'Custom Packages/rofi_1.7.0-1_amd64.deb'
